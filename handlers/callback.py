@@ -3,9 +3,6 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import bot, dp
 
 
-
-
-
 async def quiz_2(call: types.CallbackQuery):
     markup = InlineKeyboardMarkup()
     button_call_2 = InlineKeyboardButton("Next", callback_data='button_call_2')
@@ -62,8 +59,6 @@ async def quiz_3(call: types.CallbackQuery):
     )
 
 
-
-
 async def quiz_4(call: types.CallbackQuery):
     question = "What was Meta Platform Inc formerly known as?"
     answers = [
@@ -89,6 +84,6 @@ async def quiz_4(call: types.CallbackQuery):
 
 
 def register_callback_handlers(dp: Dispatcher):
-    dp.register_message_handler(quiz_2,lambda call: call.data =='button_1')
-    dp.register_message_handler(quiz_2,lambda call: call.data =='button_2')
-    dp.register_message_handler(quiz_4,lambda call: call.data =='button_3')
+    dp.register_message_handler(quiz_2, lambda call: call.data == 'button_1')
+    dp.register_message_handler(quiz_2, lambda call: call.data == 'button_2')
+    dp.register_message_handler(quiz_4, lambda call: call.data == 'button_3')
